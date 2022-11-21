@@ -4,20 +4,21 @@ There are four methods for solving Recurrence:
 2. Iteration Method
 3. Recursion Tree Method
 4. Master Method
+=======================================
+-------some important relations--------
+=======================================
 
-T(n) = T(n-1)+1 ------ O(n)
-T(n) = T(n-1)+n ------ O(nn)
+T(n) = T(n-1)+1 ----------- O(n)
+T(n) = T(n-1)+n ----------- O(nn)
 T(n) = T(n-1)+log(n) ------ O(nlogn)
-T(n) = T(n-1)+n*n ------ O(n*n*n)
-T(n) = T(n-2)+1 ------ O(n)
+T(n) = T(n-1)+n*n --------- O(n*n*n)
+T(n) = T(n-2)+1 ----------- O(n)
 
+T(n) = 2T(n-1)+1 ---------- O(2^n)
+T(n) = 3T(n-1)+1 ---------- O(3^n)
+T(n) = 2T(n-1)+n ---------- O(n*2^n)
+T(n) = n*T(n-1)+n --------- O(n*n^n)
 
-
-T(n) = 2T(n-1)+1 ------ O(2^n)
-T(n) = 3T(n-1)+1 ------ O(3^n)
-T(n) = 2T(n-1)+n ------ O(n*2^n)
-T(n) = n*T(n-1)+n ------ O(n*n^n)
-
-T(n) = T(n/2)+1 ------ O(logn)
-T(n) = T(n/2)+n ------ O(n)
-T(n) = 2T(n/2)+n ------ O(nlogn)
+T(n) = T(n/2)+1 ----------- O(logn)
+T(n) = T(n/2)+n ----------- O(n)
+T(n) = 2T(n/2)+n ---------- O(nlogn)
