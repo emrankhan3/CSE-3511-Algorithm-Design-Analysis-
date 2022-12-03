@@ -51,21 +51,21 @@ void kick(int CASE)
         }
         /* code */
     }
-    int inv=2;
+    int ind=2;
 
     for (int i = 1; i <= a.size(); ++i)
     {
         int up=2;
-        if(inv==2)up=1;
+        if(ind==2)up=1;
 
         for (int j = 1; j <= b.size(); ++j)
         {
-            if(a[i-1]==b[j-1])dp[inv][j]=dp[up][j-1]+1;
-            else dp[inv][j]=max(dp[inv][j-1],dp[up][j]);
+            if(a[i-1]==b[j-1])dp[ind][j]=dp[up][j-1]+1;
+            else dp[ind][j]=max(dp[ind][j-1],dp[up][j]);
         }
 
-        if(inv==2)inv=1;
-        else inv=2;
+        if(ind==2)ind=1;
+        else ind=2;
     }
 
 
