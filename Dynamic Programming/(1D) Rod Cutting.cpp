@@ -43,10 +43,8 @@ int chant(int n)
     
     int val = -1;
 
-    if(rod[n]!=0)
-    {
-        val = rod[n];
-    }
+    val = rod[n];
+    
     for(int i=1; i<=n/2; i++)
     {
         val = max(val,chant(i)+chant(n-i));
