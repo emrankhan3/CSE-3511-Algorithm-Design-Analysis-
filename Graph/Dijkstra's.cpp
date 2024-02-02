@@ -1,4 +1,9 @@
- vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
+class Solution
+{
+	public:
+	//Function to find the shortest distance of all the vertices
+    //from the source vertex S.
+    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         // Code here
         vector<int>ans;
@@ -26,3 +31,4 @@
         return ans;
         
     }
+};
