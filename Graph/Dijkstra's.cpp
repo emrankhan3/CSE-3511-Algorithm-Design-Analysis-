@@ -9,9 +9,7 @@ class Solution
         vector<int>ans;
         for(int i=0; i<V; i++)ans.push_back(999999);
         ans[S]=0;
-        // priority_queue<pair<int,int>>pq;
-          priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-        
+        priority_queue<pair<int,int>>pq;
         pq.push({0,S});
         
         while(!pq.empty()){
@@ -19,12 +17,13 @@ class Solution
            int node = pq.top().second;
             int cost = pq.top().first;
             pq.pop();
+            cost*=-1;
             if(ans[node]<cost)continue;
             ans[node]=cost;
 
             for(auto i:adj[node]){
 
-                pq.push({i[1]+cost,i[0]});
+                pq.push({-i[1]-cost,i[0]});
             }
             
         }
